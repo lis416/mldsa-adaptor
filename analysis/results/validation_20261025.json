@@ -1,0 +1,40 @@
+{
+  "date_utc": "2026-10-25T14:34:14.398146+00:00",
+  "baseline_paper_commit": "6ccac360f55992ca5f6147e485989e412a4e4fd7",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "binary_threshold_regression": "upward-rounded 2^-846 is strictly greater than the exact threshold; new exact comparison rejects it",
+  "runs": [
+    {
+      "script": "capped_bound.py",
+      "sha256": "66dbebb99bb5ae0bb2bbba612694ee6a7c6aee8b80b3ba2b1b5c92c2abe014b4",
+      "command": [
+        "python3",
+        "capped_bound.py"
+      ],
+      "exit_code": 0,
+      "output": "capped_bound_20261025.txt"
+    },
+    {
+      "script": "naive_attack.py",
+      "sha256": "9e5d1f4f8ae186287c6e1a6f2c40ca5f4f8e728edfe68e6dda2059503b2a0161",
+      "command": [
+        "python3",
+        "naive_attack.py"
+      ],
+      "exit_code": 0,
+      "output": "naive_attack_20261025.txt"
+    },
+    {
+      "script": "lemma1_check.py",
+      "sha256": "476e5af22eb68e30fedf48f40a4fbf136bb635d6b5cd26a4c012a48e2ad7da68",
+      "command": [
+        "python3",
+        "lemma1_check.py"
+      ],
+      "exit_code": 0,
+      "output": "lemma1_check_20261025.txt"
+    }
+  ]
+}

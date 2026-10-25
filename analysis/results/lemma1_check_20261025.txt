@@ -1,0 +1,3 @@
+ML-DSA-44: combinations satisfying C: 83801080, counterexamples: 0, 4.2s
+ML-DSA-65: combinations satisfying C: 150843744, counterexamples: 0, 6.7s
+ML-DSA-87: combinations satisfying C: 83803040, counterexamples: 0, 4.3s

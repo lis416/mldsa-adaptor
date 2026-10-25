@@ -1,0 +1,34 @@
+{
+  "source_commit": "159235d71a1cf71d8a94d2e8c7b81720f1d5ecf8",
+  "date_utc": "2026-10-25T14:42:55.835038+00:00",
+  "source_sha256": {
+    "paper_en/paper.tex": "e87eb8252ca860405fb8d3847194bb46ecb673e0d21601acab43bd2e59ae0a37",
+    "paper_en/macros.tex": "8902fe418fd2c32df18e059b50689eeb1faf1907ee39e866763f0bb640207b2a",
+    "paper_en/references.tex": "ab54c8fb5d85a5cbd044047564cf899017f8b5f281bf4b99cfda56c70df07e59",
+    "paper_en/s0.tex": "c43b7bae9763e1297f89b2dc002a9ab54adb75994a41e2b4e5a35ff33a74dbbb",
+    "paper_en/s1.tex": "35a7521f3864042e5f7c01f3f20917908e838b7c4e42ce703d86ee9a322de824",
+    "paper_en/s2.tex": "d58602e566630975edf618d0ea64f336424115b4618f6b3f7073e0bba6e3bb70",
+    "paper_en/s4.tex": "eeb9389d82e7a3ef9fcffe08f47dfa719f599900c2aba21cf97765ecdc8cc901",
+    "paper_en/s3.tex": "dc8771412ce4fef45d4d9a46213d15f47c132d9c4ce01deb5effab6c37b8c211",
+    "paper_en/appendix.tex": "f4d5c685d76c4e4884e1d63ca9737ef8a642bb695169269f68aaafcdda5522c5"
+  },
+  "pdf_sha256": "0eeabda981780eaff2423715f2ecc1874fa6eb7416daf92c98c26bb3313d1a4f",
+  "passes": 3,
+  "warnings": {
+    "undefined": [],
+    "multiply defined": [],
+    "Overfull": [],
+    "Rerun to get": []
+  },
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "dependency_sources": [
+    "https://ctan.org/pkg/algorithmicx",
+    "https://ctan.org/pkg/algorithms"
+  ],
+  "pages": 21,
+  "visual_review": {
+    "all_pages_layout_checked": true,
+    "detail_page_checked": 14,
+    "issues_found": []
+  }
+}

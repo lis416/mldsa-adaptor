@@ -1,0 +1,1 @@
+seed 20261002: 1256/200000 fail after adaptation; of these rejected by PreVerify with C: 1256; (valid ones also rejected by C: 3969)

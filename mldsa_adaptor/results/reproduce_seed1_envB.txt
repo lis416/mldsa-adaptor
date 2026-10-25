@@ -1,0 +1,38 @@
+# ML-DSA-44 adaptor signature — §5.2 experiments (Rust)
+
+seed = 1, N = 500, N_noC = 2000, N_filter = 300, N_det = 50, N_time = 100
+
+## 1 / 8. Correctness: PreSign → PreVerify → Adapt → unmodified FIPS 204 Verify → Extract
+PreVerify accepted: 500/500 = 100.000% [95% CI 99.238%, 100.000%]
+adapted signature accepted by fips204-0.4.6 (unmodified Verify): 500/500 = 100.000% [95% CI 99.238%, 100.000%]
+adapted signature accepted by RustCrypto ml-dsa 0.1.1: 500/500 = 100.000% [95% CI 99.238%, 100.000%]
+adapted signature accepted by PQClean via pqcrypto-mldsa 0.1.2: 500/500 = 100.000% [95% CI 99.238%, 100.000%]
+Extract returned exactly (r1, r2): 500/500 = 100.000% [95% CI 99.238%, 100.000%]
+(half the trials with ctx = "5.2-ctx", one quarter of PreSigns deterministic; max PreSign rounds seen = 26, cap = 4096)
+
+## 3. Rounds per signature
+ML-DSA Sign rounds: 4.2540 ± 0.3114
+PreSign rounds:     4.3920 ± 0.3343
+PreSign / Sign = 1.0324  (extra +3.24%)
+
+## 4. Unlinkability distinguishers (adversary knows r1, r2)
+fresh ML-DSA signatures — D1 (‖z − r1‖∞ ≥ γ1−β−η): 6/500 = 1.200% [95% CI 0.551%, 2.593%]
+fresh ML-DSA signatures — D2 (C(Az − c t1 2^d + r2, h) = 0): 9/500 = 1.800% [95% CI 0.950%, 3.385%]
+fresh ML-DSA signatures — D1 ∪ D2: 15/500 = 3.000% [95% CI 1.826%, 4.890%]
+adapted signatures — D1: 0, D2: 0  (must be 0 of 500)
+[info] D3 (needs t0; ‖LowBits(Az − c t)‖∞ ≥ γ2−β): fresh 0/500 = 0.000% [95% CI 0.000%, 0.762%] | adapted 2/500 = 0.400% [95% CI 0.110%, 1.447%]
+
+## 2. Necessity of C (C removed from both PreSign and PreVerify)
+passed PreVerify-without-C but adapted signature rejected by Verify: 11/2000 = 0.550% [95% CI 0.307%, 0.982%]
+(rejections per verifier: fips204 11, RustCrypto 11, PQClean 11 — must agree)
+
+## 5. Filtered variant (§4.5)
+Sign rounds 4.1667 ± 0.3890 | Sign′ rounds 5.4000 ± 0.5660 | Sign′/Sign = 1.2960 (extra +29.60%)
+FilterAdapt rejection rate: 18/318 = 5.660% [95% CI 3.610%, 8.769%]
+filtered adapted signatures accepted by all three verifiers: 300/300 = 100.000% [95% CI 98.736%, 100.000%]
+distinguishers on fresh Sign′: D1′ 0, D2′ 0, D3′ 0 | on FilterAdapt output: D1′ 0, D2′ 0, D3′ 0  (all must be 0 of 300)
+
+## 6. Deterministic-mode self-check (same M, two different Y, rnd = 0)
+min over 50 pairs of ‖ẑ − ẑ′‖∞ = 247941  (a leak would make this ≤ 2β = 156); same (M, Y) reproduced bit-exactly: 50/50
+
+

@@ -1,0 +1,1 @@
+seed=7; full-rank NTT components=256/256; recovered == r: True   time 6.6 ms

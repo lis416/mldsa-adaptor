@@ -1,0 +1,27 @@
+[package]
+name = "mldsa_adaptor"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Experiments for the ML-DSA-compatible adaptor signature (English paper revision 2026-10-25)"
+
+[dependencies]
+# primary implementation: fork of fips204 0.4.6 with an added `adaptor` module
+fips204 = { path = "vendor/fips204", default-features = false, features = ["ml-dsa-44", "default-rng"] }
+# independent verifiers (never used for signing in the experiments)
+ml-dsa = "=0.1.1"            # RustCrypto, pure Rust, separate code base
+pqcrypto-mldsa = "0.1.2"     # PQClean C reference/AVX2 via FFI
+pqcrypto-traits = "0.3.5"
+rand_core = { version = "0.6.4", features = ["getrandom"] }
+rand_chacha = "0.3.1"
+
+[profile.release]
+opt-level = 3
+debug = false
+codegen-units = 16
+lto = false
+
+[profile.test]
+opt-level = 2
+

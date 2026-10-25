@@ -1,0 +1,100 @@
+   Compiling libc v0.2.189
+   Compiling cfg-if v1.0.5
+   Compiling typenum v1.20.1
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.7
+   Compiling cmov v0.5.4
+   Compiling ctutils v0.4.2
+   Compiling syn v2.0.119
+   Compiling jobserver v0.1.35
+   Compiling shlex v2.0.1
+   Compiling getrandom v0.4.3
+   Compiling find-msvc-tools v0.1.14
+   Compiling cc v1.5.1
+   Compiling zeroize_derive v1.5.0
+   Compiling hybrid-array v0.4.15
+   Compiling rand_core v0.10.1
+   Compiling zeroize v1.9.0
+   Compiling autocfg v1.5.1
+   Compiling dunce v1.0.5
+   Compiling pqcrypto-internals v0.2.11
+   Compiling num-traits v0.2.19
+   Compiling crypto-common v0.2.2
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling zerocopy v0.8.59
+   Compiling getrandom v0.3.4
+   Compiling const-oid v0.10.2
+   Compiling der v0.8.2
+   Compiling digest v0.10.7
+   Compiling digest v0.11.3
+   Compiling getrandom v0.2.17
+   Compiling paste v1.0.15
+   Compiling glob v0.3.4
+   Compiling pqcrypto-mldsa v0.1.2
+   Compiling rand_core v0.6.4
+   Compiling spki v0.8.0
+   Compiling keccak v0.2.2
+   Compiling keccak v0.1.6
+   Compiling sponge-cursor v0.1.0
+   Compiling cpufeatures v0.2.17
+   Compiling sha2 v0.10.9
+   Compiling shake v0.1.0
+   Compiling sha3 v0.10.9
+   Compiling pkcs8 v0.11.0
+   Compiling ppv-lite86 v0.2.21
+   Compiling module-lattice v0.2.3
+   Compiling signature v3.0.0
+   Compiling pqcrypto-traits v0.3.5
+   Compiling ml-dsa v0.1.1
+   Compiling rand_chacha v0.3.1
+   Compiling fips204 v0.4.6 (/opt/eprint_v1.4/revisions/rev_20261019/artifact/mldsa_adaptor/vendor/fips204)
+   Compiling mldsa_adaptor v0.1.0 (/opt/eprint_v1.4/revisions/rev_20261019/artifact/mldsa_adaptor)
+    Finished `release` profile [optimized] target(s) in 1m 40s
+     Running unittests src/lib.rs (target/release/deps/mldsa_adaptor-7de76115ea0dfc12)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/expt.rs (target/release/deps/expt-42ac66fad0e55cf5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/noc_check.rs (target/release/deps/noc_check-160da04c0fd8bed1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/public_boundary.rs (target/release/deps/public_boundary-69398ba7e7418b68)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/core.rs (target/release/deps/core-7f41fb04fc83ee97)
+
+running 8 tests
+test adapt_refuses_bad_presignature ... ok
+test encode_y_roundtrip_and_rejects_non_residue ... ok
+test extract_rejects_digest_mismatch_and_garbage ... ok
+test deterministic_mode_mask_depends_on_y ... ok
+test generic_loop_is_byte_identical_to_fips204_sign ... ok
+test full_protocol_three_verifiers ... ok
+test ring_mul_matches_schoolbook ... ok
+test opts_presign_box_and_condition_hold ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.95s
+
+   Doc-tests mldsa_adaptor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

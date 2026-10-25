@@ -1,0 +1,3 @@
+    Finished `release` profile [optimized] target(s) in 0.10s
+     Running `target/release/public_boundary`
+seed=20261019 n=20000 fresh_boundary=106 adapted_boundary=0 rate=0.00530000 wilson95=[0.00438435,0.00640565]

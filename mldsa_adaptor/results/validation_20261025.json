@@ -1,0 +1,44 @@
+{
+  "source_commit": "159235d71a1cf71d8a94d2e8c7b81720f1d5ecf8",
+  "started_utc": "2026-10-25T14:38:55.410485+00:00",
+  "status": "passed",
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-134-generic-x86_64-with-glibc2.39",
+  "cpu_count": 2,
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+  "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)",
+  "cargo_build_jobs": 1,
+  "Cargo_lock_sha256": "d40b423e8cc41eff6fd1815aac444b9620cb95c6940d7def5fe345da62b8b944",
+  "probe_sha256": "76de87a9f9b0bfaaeb843aabc7e409661a7a69b97251e6ee9e1cea46630e3ec2",
+  "runs": [
+    {
+      "label": "core_tests",
+      "command": [
+        "cargo",
+        "test",
+        "--release",
+        "--locked",
+        "--offline"
+      ],
+      "exit_code": 0,
+      "output": "cargo_test_release_20261025.txt"
+    },
+    {
+      "label": "public_boundary",
+      "command": [
+        "cargo",
+        "run",
+        "--release",
+        "--locked",
+        "--offline",
+        "--bin",
+        "public_boundary"
+      ],
+      "exit_code": 0,
+      "output": "public_boundary_seed20261019_rerun_20261025.txt"
+    }
+  ],
+  "phase": "public_boundary",
+  "public_boundary_matches_historical": true,
+  "finished_utc": "2026-10-25T14:41:18.919222+00:00"
+}

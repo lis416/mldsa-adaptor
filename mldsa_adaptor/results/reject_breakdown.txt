@@ -1,0 +1,2 @@
+Sign: rounds/sig 4.3696 | pass z 0.5410 | pass r0|z 0.4293 | pass ct0 1.000000 | pass wt(h)≤ω 0.9854 | pass C 1.0000
+PreSign: rounds/sig 4.5202 | pass z 0.5350 | pass r0|z 0.4316 | pass ct0 1.000000 | pass wt(h)≤ω 0.9856 | pass C 0.9720
